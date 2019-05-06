@@ -2,8 +2,8 @@
   <div>
     <el-breadcrumb separator-class="el-icon-arrow-right" class="my-item">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
+      <el-breadcrumb-item>商品管理</el-breadcrumb-item>
+      <el-breadcrumb-item>商品列表</el-breadcrumb-item>
      
     </el-breadcrumb>
     <el-row>
@@ -16,7 +16,7 @@
       </el-col>
       <el-col :span="12">
         <div class="grid-content bg-purple-light">
-          <el-button type="success" plain>添加用户</el-button>
+          <el-button type="success" plain>添加商品</el-button>
         </div>
       </el-col>
     </el-row>
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: "users",
+  name: "goods",
   data() {
     return {
       tableData: [

@@ -2,21 +2,15 @@
   <div>
     <el-breadcrumb separator-class="el-icon-arrow-right" class="my-item">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
+      <el-breadcrumb-item>权限管理</el-breadcrumb-item>
+      <el-breadcrumb-item>角色列表</el-breadcrumb-item>
      
     </el-breadcrumb>
     <el-row>
-      <el-col :span="6">
-        <div class="grid-content bg-purple">
-          <el-input placeholder="请输入内容"  class="input-with-select">
-            <el-button slot="append" icon="el-icon-search"></el-button>
-          </el-input>
-        </div>
-      </el-col>
-      <el-col :span="12">
+     
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
-          <el-button type="success" plain>添加用户</el-button>
+          <el-button type="success" plain>添加角色</el-button>
         </div>
       </el-col>
     </el-row>
@@ -26,22 +20,12 @@
       <el-table-column prop="name" label="姓名" width="180"></el-table-column>
       <el-table-column prop="address" label="地址"></el-table-column>
     </el-table>
-
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      :current-page="1"
-      :page-sizes="[2, 4, 8, 10]"
-      :page-size="8"
-      layout="total, sizes, prev, pager, next, jumper"
-      :total="100">
-    </el-pagination>
   </div>
 </template>
 
 <script>
 export default {
-  name: "users",
+  name: "roles",
   data() {
     return {
       tableData: [
@@ -67,15 +51,7 @@ export default {
         }
       ]
     };
-  },
-   methods: {
-      handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
-      },
-      handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-      }
-    },
+  }
 };
 </script>
 

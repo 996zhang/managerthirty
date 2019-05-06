@@ -2,21 +2,15 @@
   <div>
     <el-breadcrumb separator-class="el-icon-arrow-right" class="my-item">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
+      <el-breadcrumb-item>商品管理</el-breadcrumb-item>
+      <el-breadcrumb-item>商品分类</el-breadcrumb-item>
      
     </el-breadcrumb>
     <el-row>
-      <el-col :span="6">
-        <div class="grid-content bg-purple">
-          <el-input placeholder="请输入内容"  class="input-with-select">
-            <el-button slot="append" icon="el-icon-search"></el-button>
-          </el-input>
-        </div>
-      </el-col>
-      <el-col :span="12">
+     
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
-          <el-button type="success" plain>添加用户</el-button>
+          <el-button type="success" plain>添加分类</el-button>
         </div>
       </el-col>
     </el-row>
@@ -41,7 +35,7 @@
 
 <script>
 export default {
-  name: "users",
+  name: "categories",
   data() {
     return {
       tableData: [
